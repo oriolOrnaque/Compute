@@ -16,16 +16,24 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    appendright.cpp \
+    changesign.cpp \
     main.cpp \
     mainwindow.cpp \
+    multiply.cpp \
     operation.cpp \
+    popright.cpp \
     problem.cpp \
     problemgenerator.cpp \
     sum.cpp
 
 HEADERS += \
+    appendright.h \
+    changesign.h \
     mainwindow.h \
+    multiply.h \
     operation.h \
+    popright.h \
     problem.h \
     problemgenerator.h \
     sum.h

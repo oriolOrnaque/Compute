@@ -7,6 +7,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
 
+    this->setWindowTitle("Compute");
+
     this->pgen = new ProblemGenerator();
 
     this->p = this->pgen->nextProblem();
@@ -27,7 +29,10 @@ void MainWindow::updateDisplay(void)
 {
     ui->label->setText(QString::number(this->p->getCurrentMovs()));
     ui->label_4->setText(QString::number(this->p->getGoal()));
-    ui->label_5->setText(QString::number(this->p->getCurrentValue()));
+    if(this->p->isSolved())
+        ui->label_5->setText("SOLVED");
+    else
+        ui->label_5->setText(QString::number(this->p->getCurrentValue()));
 }
 
 void MainWindow::updateButtons(void)
